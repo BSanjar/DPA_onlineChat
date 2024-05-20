@@ -1,0 +1,393 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\onlineChat2.bundle.scp.css",
+      "PackagePath": "staticwebassets\\onlineChat2.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\css\\StyleChatBoard.css",
+      "PackagePath": "staticwebassets\\css\\StyleChatBoard.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\css\\StyleMainSite.css",
+      "PackagePath": "staticwebassets\\css\\StyleMainSite.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\css\\StyleModal.css",
+      "PackagePath": "staticwebassets\\css\\StyleModal.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\css\\app.css",
+      "PackagePath": "staticwebassets\\dpa_res\\css\\app.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\css\\wizard.css",
+      "PackagePath": "staticwebassets\\dpa_res\\css\\wizard.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\boxicons.eot",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\boxicons.eot"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\boxicons.svg",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\boxicons.svg"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\boxicons.ttf",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\boxicons.ttf"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\boxicons.woff",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\boxicons.woff"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\boxicons.woff2",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\boxicons.woff2"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\lightgallery\\lg.eot",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\lightgallery\\lg.eot"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\lightgallery\\lg.svg",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\lightgallery\\lg.svg"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\lightgallery\\lg.ttf",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\lightgallery\\lg.ttf"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\lightgallery\\lg.woff",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\lightgallery\\lg.woff"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\slick.eot"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\slick.svg"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\dpa_res\\fonts\\slick.woff"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\icons\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\dpa_res\\icons\\apple-touch-icon.png"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\icons\\favicon-16x16.png",
+      "PackagePath": "staticwebassets\\dpa_res\\icons\\favicon-16x16.png"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\icons\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\dpa_res\\icons\\favicon-32x32.png"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\icons\\logoPNG.png",
+      "PackagePath": "staticwebassets\\dpa_res\\icons\\logoPNG.png"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\icons\\tunduk.png",
+      "PackagePath": "staticwebassets\\dpa_res\\icons\\tunduk.png"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\js\\app.js",
+      "PackagePath": "staticwebassets\\dpa_res\\js\\app.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\js\\datatables.bundle.js",
+      "PackagePath": "staticwebassets\\dpa_res\\js\\datatables.bundle.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\qrBot.jpg",
+      "PackagePath": "staticwebassets\\dpa_res\\qrBot.jpg"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\dpa_res\\site.webmanifest",
+      "PackagePath": "staticwebassets\\dpa_res\\site.webmanifest"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\js\\ChatConnect.js",
+      "PackagePath": "staticwebassets\\js\\ChatConnect.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\js\\globalHelpers.js",
+      "PackagePath": "staticwebassets\\js\\globalHelpers.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\logos\\bg_chat.jpg",
+      "PackagePath": "staticwebassets\\logos\\bg_chat.jpg"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\logos\\download.png",
+      "PackagePath": "staticwebassets\\logos\\download.png"
+    },
+    {
+      "Id": "C:\\sanjar\\onlineChat\\onlineChat2\\onlineChat2\\wwwroot\\logos\\logoPNG.png",
+      "PackagePath": "staticwebassets\\logos\\logoPNG.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.onlineChat2.props",
+      "PackagePath": "build\\onlineChat2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.onlineChat2.props",
+      "PackagePath": "buildMultiTargeting\\onlineChat2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.onlineChat2.props",
+      "PackagePath": "buildTransitive\\onlineChat2.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.onlineChat2.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

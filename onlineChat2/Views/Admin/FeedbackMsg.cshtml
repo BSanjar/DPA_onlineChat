@@ -1,0 +1,107 @@
+﻿@model onlineChat2.Models.DB_Models.Chat;
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    //Layout = null;
+}
+
+
+@if (ViewBag.status != "")
+{
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-dialog" style="width: 40%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    @if (ViewBag.status == "success")
+                    {
+                        <h5 style="color:#6cd3d1" class="modal-title">@ViewBag.message</h5>
+                    }
+                    else
+                    {
+                        <h2 style="color:red" class="modal-title">ОШИБКА</h2>
+                        <hr />
+                        <h5 style="color:red" class="modal-title">@ViewBag.message</h5>
+                    }
+                    <span class="close modalClose" data-dismiss="modal" aria-label="Закрыть">&times;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    $(document).ready(function () {
+        // Показать модальное окно, если ViewBag.Status не равен null
+        $("#myModal").show();
+
+        // Закрыть модальное окно через 3 секунды (3000 миллисекунд)
+        setTimeout(function () {
+            $("#myModal").hide();
+        }, 5000);
+
+        // Закрыть модальное окно при клике на крестик
+        $(".modalClose").click(function () {
+            $("#myModal").hide();
+        });
+
+        // Закрыть модальное окно при клике на затемненный фон
+        $(".modal").click(function (e) {
+            if (e.target === this) {
+                $("#myModal").hide();
+            }
+        });
+    });
+</script>
+
+    <div class="letter">
+
+    <div style="    margin: 5px;
+    padding: 2%;
+    border: 1px solid #ccc;
+    background-color: aliceblue;border-radius: 5px;">
+        
+        <form asp-action="SaveFile" method="get">
+           @*  <a href="#" class="download-btn"></a> *@
+            <input type="hidden" name="id" value="@Model.Id" />
+            <button type="submit" class="download-btn"></button>
+        </form>
+
+    
+
+    <header>
+        <a href="#" class="agency-logo">
+            <img src="/dpa_res/icons/logoPNG.png" alt="logo" class="agency-logo-img"><br />
+            <span class="agency-title">Государственное агентство по защите персональных данных при Кабинете Министров Кыргызской Республики</span>
+        </a>
+      
+    </header>
+    <h3 style="text-align:center; color:#173d7a">Официальное обращение</h3>
+        <div class="content">
+            <p><strong>ФИО гражданина:</strong> @Model.UserNavigation.Name</p>           
+            <p><strong>Тема обращения:</strong> @Model.Title</p>
+            <p><strong>Текст обращения:</strong> @Model.Question</p>
+
+            <p><strong>Ответсвенный сотрудник:</strong> @Model.AdminNavigation.Name</p>
+            <p><strong>Дата обращения:</strong> @Model.CreatedAt?.ToString("dd.MM.yyyy hh:mm:ss")</p>
+        </div>
+       
+
+    </div>
+
+
+   
+   
+    <form class="response-form" action="~/Admin/SendAswer" method="post">
+            <input type="hidden" name="id" value="@Model.Id" />
+            <textarea name="response" id="response" cols="30" rows="5" placeholder="Введите ваш ответ...">@Model.Answer</textarea>
+        <button class="response-form-btn" type="submit">Отправить ответ</button>
+        </form>
+</div>
+
+
+
+<style>
+
+
+
+</style>

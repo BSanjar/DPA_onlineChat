@@ -1,0 +1,345 @@
+﻿@using onlineChat2.Models.FliterModels
+@model IndexViewModel
+
+@{
+	Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<script>
+	function filterTable2() {
+		const form = document.getElementById('filter');
+		form.submit();
+	}
+
+	</script>
+
+
+
+<section class="section">
+	<div class="container" style="max-width: 100%;">
+		
+		<div class="row">
+			<form id="filter" method="get">
+				<div class="row">
+					<div class="col-sm-6">
+					
+					<label class="mb-2 hasTrans">Фильтр</label>
+					
+					<div class="mb-4 d-block">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" onclick="filterTable2()" name="filter" id="source1" value="all"
+							@if (Model.FilterViewModel._SelectedSource == "all")
+							{
+								<text>
+									checked=""
+								</text>
+							}
+							>
+								<label class="form-check-label hasTrans" for="source1">Все</label>
+						</div>
+						<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" onclick="filterTable2()" name="filter" id="source2" value="onlinechat"
+								@if (Model.FilterViewModel._SelectedSource == "onlinechat")
+								{
+								<text>
+									checked=""
+								</text>
+							}
+							>
+								<label class="form-check-label hasTrans" for="source2">Онлайн чат</label>
+						</div>
+						<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" onclick="filterTable2()" name="filter" id="source3" value="feedback"
+								@if (Model.FilterViewModel._SelectedSource == "feedback")
+								{
+								<text>
+									checked=""
+								</text>
+							}
+							>
+								<label class="form-check-label hasTrans" for="source3">Обратная связь</label>
+						</div>
+					</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-sm-6">
+						<label class="mb-2 hasTrans">Тип вопроса</label>
+
+						<div class="mb-4 d-block">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" onclick="filterTable2()" name="typeTheme" id="typeTheme1" value="all"
+								@if (Model.FilterViewModel._SelectedTypeTheme == "all")
+								{
+									<text>
+										checked=""
+									</text>
+								}
+								>
+								<label class="form-check-label hasTrans" for="typeTheme1">Все</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" onclick="filterTable2()" name="typeTheme" id="typeTheme2" value="jur"
+								@if (Model.FilterViewModel._SelectedTypeTheme == "jur")
+								{
+									<text>
+										checked=""
+									</text>
+								}
+								>
+								<label class="form-check-label hasTrans" for="typeTheme2">Юридичесские вопросы</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" onclick="filterTable2()" name="typeTheme" id="typeTheme3" value="tech"
+								@if (Model.FilterViewModel._SelectedTypeTheme == "tech")
+								{
+									<text>
+										checked=""
+									</text>
+								}
+								>
+								<label class="form-check-label hasTrans" for="typeTheme3">Техничесские вопросы</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="form-group col-md-9">
+						<label for="s_inn " class="hasTrans">Поиск из таблицы</label>
+						<input type="text" class="form-control hasTransPh" id="searchInput" 
+						name="searchInput" @* oninput="searchFromTable()" *@ placeholder="введите ключевое слово для поиска..." value="@Model.FilterViewModel._searchInput">
+					</div>
+					<div class="form-group col-md-3">
+						<label></label> <br />
+						<button type="submit" class="btn btn-success hasTrans">Поиск</button>
+					</div>
+				</div>
+			</form>
+
+
+			<div class="table-responsive">
+				<div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+					<div class="row">
+						<div class="col-sm-12 col-md-6"></div>
+						<div class="col-sm-12 col-md-6"></div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<table class="table table-g table-bordered dataTable no-footer dtr-inline" id="dataTable3"
+								   role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+								<thead>
+									<tr role="row">
+										<th class="text-start " data-column="2" data-type="number" style="width: 2%">
+											#
+										</th>
+										<th class="text-start " data-column="3" data-type="text" style="width: 25%">
+											<a asp-action="Index" style="color: #173d7a;" 											
+											   asp-route-searchInput="@(Model.FilterViewModel._searchInput)"
+											   asp-route-filter="@(Model.FilterViewModel._SelectedSource)"
+											   asp-route-typeTheme="@(Model.FilterViewModel._SelectedTypeTheme)"><i class="bx bx-sort"></i><span class="hasTrans">Гражданин</span></a>
+										</th>
+										<th class="text-start font-600  " data-column="5" data-type="text"
+											style="width: 10%">
+											<a asp-action="Index" style="color: #173d7a;"											  
+											   asp-route-searchInput="@(Model.FilterViewModel._searchInput)"
+											   asp-route-filter="@(Model.FilterViewModel._SelectedSource)"
+											   asp-route-typeTheme="@(Model.FilterViewModel._SelectedTypeTheme)"><i class="bx bx-sort"></i><span class="hasTrans">Тип вопроса</span></a>
+										</th>
+
+										<th class="text-start font-600  " data-column="5" data-type="text"
+											style="width: 25%">
+											<a asp-action="Index" style="color: #173d7a;"
+											   asp-route-searchInput="@(Model.FilterViewModel._searchInput)"
+											   asp-route-filter="@(Model.FilterViewModel._SelectedSource)"
+											   asp-route-typeTheme="@(Model.FilterViewModel._SelectedTypeTheme)"><i class="bx bx-sort"></i><span class="hasTrans">Ответственный</span></a>
+										</th>
+
+										<th class="font-roboto  " data-column="3" data-type="text"
+											style="width: 10%">
+											<a asp-action="Index" style="color: #173d7a;"											  
+											   asp-route-searchInput="@(Model.FilterViewModel._searchInput)"
+											   asp-route-filter="@(Model.FilterViewModel._SelectedSource)"
+											   asp-route-typeTheme="@(Model.FilterViewModel._SelectedTypeTheme)">
+												<i class="bx bx-sort"></i><span class="hasTrans">Источник обращения</span>
+											</a>
+										</th>
+
+										<th class="font-roboto  " data-column="3" data-type="date"
+											style="width: 15%">
+											<a asp-action="Index" style="color: #173d7a;"
+											   asp-route-sortOrder="@(Model.SortViewModel.RegDate)"
+											   asp-route-searchInput="@(Model.FilterViewModel._searchInput)"
+											   asp-route-filter="@(Model.FilterViewModel._SelectedSource)"
+											   asp-route-typeTheme="@(Model.FilterViewModel._SelectedTypeTheme)">
+												<i class="bx bx-sort"></i><span class="hasTrans">Последняя активность</span>
+											</a>
+										</th>
+
+
+										<th class="font-roboto  " data-column="3" data-type="date"
+											style="width: 15%">
+											<a asp-action="Index" style="color: #173d7a;"
+											   asp-route-sortOrder="@(Model.SortViewModel.Status)"
+											   asp-route-searchInput="@(Model.FilterViewModel._searchInput)"
+											   asp-route-filter="@(Model.FilterViewModel._SelectedSource)"
+											   asp-route-typeTheme="@(Model.FilterViewModel._SelectedTypeTheme)">
+												<i class="bx bx-sort"></i><span class="hasTrans">Статус</span>
+											</a>
+										</th>
+
+										<th class="hasTrans" data-type="text" style="width: 5%"></th>
+									</tr>
+								</thead>
+								<tbody>
+									@{
+										int c = ((Model.Registers.PageIndex - 1) * Model.Registers.PageSize + 1);
+									}
+									@foreach (var i in Model.Registers)
+									{
+										<tr role="row" @if (i.Status == "new")
+										{
+											<text>class="newChatRow"</text>
+										}
+										>
+											<td class="sorting_1 dtr-control">@c</td>
+											<td>@i.UserNavigation.Name</td>
+											<td class=" font-600">@if (i.TypeTheme == "tech")
+												{
+													<text>Техничесский</text>
+												}
+												else
+												{
+													<text>Юридичесский</text>
+												}
+											</td>
+
+											<td class=" font-600">@i.AdminNavigation.Name</td>
+											<td class=" font-roboto">@i.MsgSource</td>
+											<td class=" font-roboto">@i.UpdatedAt?.ToString("dd-MM-yyyy hh:mm:ss")</td>
+											
+												@{
+													if (i.Status == "new")
+												{
+													<td class=" font-roboto">
+															<p style="margin-bottom: 0;" class="hasTrans">На рассмотрении</p>
+													</td>
+													
+												}
+													else if (i.Status == "waiting")
+												{
+													<td class=" font-roboto">
+															<p style="margin-bottom: 0; color: #1dbcbb;" class="hasTrans">В ожидании</p>
+															</td>
+													
+													}
+													else
+												{
+													<td class=" font-roboto">
+															<p style="margin-bottom: 0;" class="hasTrans">Закрыт</p>
+															</td>
+													
+													}
+												}
+											<td>
+												<a  href="@Url.Action("show","Admin",new {id=i.Id})" style="padding:8px;"
+													   class="hasTrans response-form-btn">Открыть</a>
+											</td>									
+											
+										</tr>
+										c++;
+									}
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="row">
+						@if (Model.TotalRecords > 0)
+						{
+							<div class="col-sm-12 col-md-5">
+								<div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">
+									Записи с @((Model.Registers.PageIndex - 1) * Model.Registers.PageSize + 1)
+									до @((Model.Registers.PageIndex - 1) * Model.Registers.PageSize + Model.Registers.Count)
+									из @Model.TotalRecords записей
+								</div>
+							</div>
+						}
+						else
+						{
+							<div class="col-sm-12 col-md-5">
+								<div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">
+									Записи с 0
+									до 0
+									из 0 записей
+								</div>
+							</div>
+						}
+
+						<div class="col-sm-12 col-md-7">
+							<div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+								<div class="pagination-container">
+									<ul class="pagination" style="float:right">
+										@{
+											var totalPages = Model.Registers.TotalPages;
+											var currentPage = Model.Registers.PageIndex;
+											var maxButtonsToShow = 6;
+
+											var startPage = Math.Max(1, currentPage - maxButtonsToShow / 2);
+											var endPage = Math.Min(totalPages, startPage + maxButtonsToShow - 1);
+
+											if (startPage > 1)
+											{
+													<li class="page-item">
+														<a asp-action="Index" class="page-link"
+											   	asp-route-sortOrder="@(Model.SortViewModel.Current)"
+											   	asp-route-searchInput="@(Model.FilterViewModel._searchInput)"
+											   	asp-route-filter="@(Model.FilterViewModel._SelectedSource)"
+											   	asp-route-page="1">1</a>
+
+														
+													</li>
+													<li class="page-item disabled">
+														<span class="page-link">...</span>
+													</li>
+											}
+
+											for (int i = startPage; i <= endPage; i++)
+											{
+													<li class="page-item @(i == currentPage ? "active" : "" )">
+														<a asp-action="Index" class="page-link"
+													   	asp-route-sortOrder="@(Model.SortViewModel.Current)"
+													   	asp-route-searchInput="@(Model.FilterViewModel._searchInput)"
+													   asp-route-filter="@(Model.FilterViewModel._SelectedSource)"
+													   	asp-route-page="@i">@i</a>
+													</li>
+											}
+
+											if (endPage < totalPages)
+											{
+													<li class="page-item disabled">
+														<span class="page-link">...</span>
+													</li>
+													<li class="page-item">
+
+														<a asp-action="Index" class="page-link"
+													   	asp-route-sortOrder="@(Model.SortViewModel.Current)"
+													   	asp-route-searchInput="@(Model.FilterViewModel._searchInput)"
+													   asp-route-filter="@(Model.FilterViewModel._SelectedSource)"
+													   	asp-route-page="@totalPages">@totalPages</a>
+
+													</li>
+											}
+										}
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

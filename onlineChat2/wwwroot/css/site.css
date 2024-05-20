@@ -1,0 +1,105 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.newChatRow{
+    background-color:lightcoral;
+}
+
+.letter {
+    width: 80%;
+    margin: 20px auto;
+    /*  border: 1px solid #ccc; */
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.agency-logo {
+    /* display: flex; */
+    /* align-items: center; */
+    width: 100%;
+    /* align-content: end; */
+    /* margin-left: 50%; */
+    text-align: center;
+    color: #1dbcb9;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.agency-logo-img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.agency-title {
+    font-size: 14px;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.download-btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url('/logos/download.png'); /* замените 'download-icon.png' на путь к вашему изображению */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+    .download-btn:hover {
+        background-color: #0056b3;
+    }
+
+.response-form {
+    margin-top: 20px;
+}
+
+    .response-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .response-form-btn  {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .response-form-btn:hover {
+            background-color: #0056b3;
+            color:white;
+        }

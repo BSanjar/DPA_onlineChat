@@ -1,0 +1,29 @@
+﻿@model onlineChat2.Models.DB_Models.Chat
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    onlineChat2.Models.DB_Models.User currentUser = (onlineChat2.Models.DB_Models.User) ViewBag.currentUser;
+}
+
+            <div class="chat-container">
+                <div class="chat-header">
+
+                </div>
+                <div class="chat-messages" id="messagesList">
+                    <!-- Messages will be appended here -->
+                </div>
+                <div class="chat-input">
+        <input type="text" class="chatInput" id="message" placeholder="Ваше сообщение...">
+                    <button id="sendBtn" onclick="sendMessage()">Отправить</button>
+                </div>
+            </div>
+
+        <input type="hidden" name="userId" id="userId" value="@currentUser.Id" />
+        <input type="hidden" name="groupId" id="groupId" value="@Model.Id" />
+        <input type="hidden" name="userName" id="userName" value="@currentUser.Name" />
+  
+<script>
+    startChat();
+</script>
+
+

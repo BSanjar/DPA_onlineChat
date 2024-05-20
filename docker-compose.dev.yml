@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  dev-onlinechat:
+    hostname: dev-onlinechat
+    build:
+      context: .
+      dockerfile: onlineChat2/Dockerfile
+      args:
+#        - APP_ENV_FILE=.env.dev
+        - NODE_VERSION=20
+    ports:
+      - 3014:80

@@ -1,0 +1,244 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutChat.cshtml";
+}
+<div>
+<div class="chat-container">
+        <div class="chat-header hasTrans">Онлайн чат со специалистами</div>
+    <div class="chat-messages" id="messagesList">       
+            <div class="message-container other-message">
+                <div class="message-header">
+                    <span class="sender-name">БОТ</span>
+                    </div>
+                    <div class="message-content">
+                    <p class="hasTrans">Для консульстации со специалистом, прошу ввести вашу почту</p>
+                        <span class="message-time">@DateTime.Now.ToString("hh:mm:ss dd.MM.yyyy")</span>
+                    </div>
+            </div>        
+    </div>
+
+        <input type="hidden" name="userId" id="userId" value="" />
+        <input type="hidden" name="groupId" id="groupId" value="" />
+        <input type="hidden" name="userName" id="userName" value="" />
+        <input type="hidden" name="userEmail" id="userEmail" value="" />
+        <input type="hidden" name="typeTheme" id="typeTheme" value="" />
+        <input type="hidden" name="step" id="step" value="email" />
+    
+        <div class="chat-input" id="inputPlace">
+            <input type="text" class="chatInput hasTransPh" id="message" placeholder="Ваше сообщение...">
+            <button id="sendBtn" onclick="sendMessageStep()" class="hasTrans">Отправить</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    function changeInputType(type){
+        if (type == "typeTheme") {
+            document.getElementById("inputPlace").innerHTML = "<select class=\"chatInput\" id=\"message\" name=\"message\">" +
+                "<option class=\"hasTrans\" value=\"jur\">Юридичесский вопрос</option>" +
+                "<option class=\"hasTrans\" value=\"tech\">Техничесский вопрос</option>" +
+                   "</select>"+
+                "<button id=\"sendBtn\" onclick=\"sendMessageStep()\" class=\"hasTrans\">Отправить</button>";
+        }
+        else {
+            document.getElementById("inputPlace").innerHTML = "<input class=\"chatInput hasTransPh\" type=\"text\" id=\"message\" placeholder=\"Ваше сообщение...\">" +
+                "<button id=\"sendBtn\" onclick=\"sendMessageStep()\" class=\"hasTrans\">Отправить</button>";
+        }
+    }
+
+    function sendMessageStep() {
+
+        var requestData = {};
+        var step = document.getElementById("step").value;
+        var message = document.getElementById("message").value;
+        
+        if (message != null) {
+
+            
+
+            if (step == "msg") {
+                sendMessage();
+                return;
+            }
+            document.getElementById("message").value = "";
+
+            createMyMessageBlock(message);
+
+            if (step == "email") {
+                requestData.email = message;
+            }
+
+            if (step == "name") {
+                var email = document.getElementById("userEmail").value;
+                requestData.email = email;
+                requestData.name = message;
+            }
+
+            if (step == "typeTheme") {
+                var email = document.getElementById("userEmail").value;
+                var name = document.getElementById("userName").value;
+                var userId = document.getElementById("userId").value;
+                var groupId = document.getElementById("groupId").value;
+                requestData.email = email;
+                requestData.name = name;
+                requestData.userId = userId;
+                requestData.groupId = groupId;
+                requestData.typeTheme = message;
+            }
+
+            requestData.step = step;
+
+
+            console.log(requestData);
+
+
+            var messageBlock = "";
+
+            $.ajax({
+                type: 'POST',
+                url: '/Home/newChat',
+                data: requestData,
+                success: function (data) {
+                    if (data.step == "email") {
+                        createMessageBlock("Введите корректную почту");
+
+                        document.getElementById("step").value = data.step;
+                    }
+
+                    else if (data.step == "name") {
+                        createMessageBlock("Введите ваше имя");
+
+                        document.getElementById("step").value = data.step;
+                        document.getElementById("userEmail").value = data.email;
+                        document.getElementById("typeTheme").value = data.typeTheme;
+                    }
+                    else if (data.step == "typeTheme") {
+                        createMessageBlock("Выберите тип вашего вопроса");
+
+                        changeInputType("typeTheme");
+
+                        document.getElementById("step").value = data.step;
+                        document.getElementById("userEmail").value = data.email;
+                        document.getElementById("userName").value = data.name;
+                        document.getElementById("typeTheme").value = data.typeTheme;
+                        document.getElementById("userId").value = data.userId;
+                    }
+                    else if (data.step == "msg") {
+                        createMessageBlock("Подключаю специалиста... вы можете пока отправить ваше сообщение ");
+
+                        changeInputType("text");
+
+                        document.getElementById("step").value = data.step;
+                        document.getElementById("userEmail").value = data.email;
+                        document.getElementById("userName").value = data.name;
+                        document.getElementById("typeTheme").value = data.typeTheme;
+                        document.getElementById("userId").value = data.userId;
+                        document.getElementById("groupId").value = data.groupId;
+
+                        startChat();
+
+                    }
+
+                    //console.log(messageBlock);
+                    //document.getElementById("messagesList").appendChild(messageBlock);
+
+
+                    console.log(data);
+                },
+                error: function (xhr, str) {
+                    console.log(str)
+                }
+            });
+        }
+    }
+
+
+    function createMessageBlock(text){
+
+        var currentDate = new Date();
+        var formattedDateTime = currentDate.toLocaleTimeString('ru-RU', { hour12: false }) + ' ' + currentDate.toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' });
+
+
+        const messageContainer = document.createElement("div");
+        messageContainer.classList.add("message-container");
+
+        const messageHeader = document.createElement("div");
+        messageHeader.classList.add("message-header");
+
+        const messageUserName = document.createElement("span");
+        messageUserName.classList.add("sender-name");
+
+        const messageTime = document.createElement("span");
+        messageTime.classList.add("message-time");
+
+        const messageContent = document.createElement("div");
+        messageContent.classList.add("message-content");
+
+        const messageText = document.createElement("p");
+
+        messageUserName.textContent = "БОТ";
+        messageHeader.appendChild(messageUserName);
+        messageContainer.appendChild(messageHeader);
+        messageText.textContent = text;
+        messageContent.appendChild(messageText);
+        messageTime.textContent = formattedDateTime;
+        messageContent.appendChild(messageTime);
+        messageContainer.appendChild(messageContent);
+        messageContainer.classList.add("other-message");
+
+        var messagesList = document.getElementById("messagesList");
+
+        messagesList.appendChild(messageContainer);
+
+        messagesList.scrollTop = messagesList.scrollHeight;
+    }
+
+    function createMyMessageBlock(text) {
+        var currentDate = new Date();
+        var formattedDateTime = currentDate.toLocaleTimeString('ru-RU', { hour12: false }) + ' ' + currentDate.toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' });
+
+
+        const messageContainer = document.createElement("div");
+        messageContainer.classList.add("message-container");
+
+        const messageHeader = document.createElement("div");
+        messageHeader.classList.add("message-header");
+
+        const messageUserName = document.createElement("span");
+        messageUserName.classList.add("sender-name");
+
+        const messageTime = document.createElement("span");
+        messageTime.classList.add("message-time");
+
+        const messageContent = document.createElement("div");
+        messageContent.classList.add("message-content");
+
+        const messageText = document.createElement("p");
+
+        messageUserName.textContent = "Вы";
+        messageHeader.appendChild(messageUserName);
+        messageContainer.appendChild(messageHeader);
+        messageText.textContent = text;
+        messageContent.appendChild(messageText);
+        messageTime.textContent = formattedDateTime;
+        messageContent.appendChild(messageTime);
+        messageContainer.appendChild(messageContent);
+        messageContainer.classList.add("user-message");
+
+        var messagesList = document.getElementById("messagesList");
+
+        messagesList.appendChild(messageContainer);
+
+        messagesList.scrollTop = messagesList.scrollHeight;
+    }
+
+</script>
+
+
+
+
+
+
+

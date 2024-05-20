@@ -1,0 +1,221 @@
+﻿
+<!DOCTYPE html>
+<html lang="ky" class="notranslate" translate="no" prefix="og: http://ogp.me/ns#">
+<head>
+    <base href="">
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <meta name="google" content="notranslate" />
+    <meta name="csrf-token" content="boQCyKNYVF8aSkZDW2hs1trmVQbodbX9h0HPbYP1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="~/dpa_res/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/dpa_res/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/dpa_res/icons/favicon-16x16.png">
+    <link rel="manifest" href="~/dpa_res/site.webmanifest">
+
+    <link href="~/dpa_res/css/app.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="~/dpa_res/css/wizard.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+   
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/dpa_res/js/datatables.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ru.min.js" integrity="sha512-tPXUMumrKam4J6sFLWF/06wvl+Qyn27gMfmynldU730ZwqYkhT2dFUmttn2PuVoVRgzvzDicZ/KgOhWD+KAYQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/StyleModal.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/StyleChatBoard.css">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="~/js/ChatConnect.js"></script>
+
+</head>
+<body class="">
+    <nav class="nav-top">
+        <div class="container d-flex">
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link nav-vision ps-0 "><i class='bx bx-show'></i><span class="hasTrans">Режим для слабовидящих</span></a></li>
+            </ul>
+            <ul class="nav me-auto nav-locale">
+                <li class="nav-item"><a href="#" disabled class="nav-link"><i class='bx bx-world p-0'></i></a></li>
+                <li class="nav-item nav-locale-item">
+                    <a rel="alternate" class="nav-link lnEl" id="kyLn" onclick="changeLanguage('ky')" reflang="ky" href="#">KYR</a>
+                </li>
+                <li class="nav-item nav-locale-item">
+                    <a rel="alternate" class="nav-link lnEl  nav-active " id="ruLn" onclick="changeLanguage('ru')" reflang="ru" href="#">RU</a>
+                </li>
+                @*  <li class="nav-item nav-locale-item">
+                <a rel="alternate" class="nav-link lnEl" id="enLn" onclick="changeLanguage('en')" reflang="en" href="#">ENG</a>
+                </li> *@
+            </ul>
+
+            <ul class="nav nav-locale">
+                <li class="nav-item"><a href="https://dpa.gov.kg/ky/feedback" class="nav-link "><i class='bx bx-mail-send'></i><span class="hasTrans">Связаться с нами</span></a></li>
+               
+            </ul>
+        </div>
+    </nav>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center me-auto" href="https://dpa.gov.kg/ky">
+                    <img src="~/dpa_res/icons/logoPNG.png" alt="logo" class="d-inline-block align-text-center">
+                    <div class="navbar-brand-title">
+                        <span class="navbar-brand-title-desc mb-2 hasTrans">Государственное агентство по защите персональных данных при Кабинете Министров Кыргызской Республики</span>
+                        <span class="navbar-brand-title-title hasTrans">Государственное агентство по защите персональных данных</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header border-bottom">
+                        <a class="navbar-brand d-flex align-items-center me-auto" href="https://dpa.gov.kg/ky">
+                            <div class="navbar-brand-title ms-2">
+                                <span class="navbar-brand-title-desc mb-2">Государственное агентство по защите персональных данных при Кабинете Министров Кыргызской Республики</span>
+                                <span class="navbar-brand-title-title">Государственное агентство по защите персональных данных</span>
+                            </div>
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="nav nav-menu justify-content-end flex-grow-1">
+
+                            <li class="nav-item">
+                                <a href='@Url.Action("index","Landing")' class="nav-link px-2 hasTrans">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://dpa.gov.kg/register/help" class="nav-link px-2 hasTrans">Помощь</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href='@Url.Action("create","UserPage")' class="nav-link px-2 hasTrans">
+                                    Подача заявки
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="page-top">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="https://dpa.gov.kg/ky" class="hasTrans">Основной сайт</a></li>
+                    <li class="breadcrumb-item active"><a href="https://registry.dpa.gov.kg/" class="hasTrans">@ViewData["Title"]</a></li>
+                </ol>
+            </nav>
+            <div class="page-title hasTrans">@ViewData["Title"]</div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    @RenderBody()
+
+
+
+    <a class="top-link hide" href="" id="js-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    @await Html.PartialAsync("Footer/Footer")
+
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script src="~/dpa_res/js/app.js"></script>
+    <script src="~/js/userPageHelpers.js"></script>
+    <script src="~/js/globalHelpers.js"></script>
+
+    <script>
+        $(function () {
+            $(document).on('click', '.nav-vision', function (event) {
+                event.preventDefault();
+                $('body').toggleClass('vision');
+
+                if ($('body').hasClass('vision')) {
+                    var mode = '1';
+                } else {
+                    var mode = '0';
+                };
+
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    cache: false,
+                    type: 'GET',
+                    url: "https://dpa.gov.kg/ky/visionmode",
+                    data: {
+                        'mode': mode
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+@* 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - onlineChat2</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/StyleModal.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/onlineChat2.styles.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/css/StyleChatBoard.css">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="~/js/ChatConnect.js"></script>
+
+</head>
+<body>   
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; БСС - Онлайн чат ГАЗПД
+        </div>
+    </footer>
+   
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+ *@

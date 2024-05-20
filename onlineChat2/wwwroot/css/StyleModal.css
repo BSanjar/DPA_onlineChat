@@ -1,0 +1,80 @@
+﻿/* Стили для заднего фона (затемнение) */
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон с прозрачностью */
+    z-index: 1050; /* Убедитесь, что задний фон расположен над модальным окном */
+}
+
+/* Стили для модального окна */
+.modal {
+    z-index: 1051; /* Убедитесь, что модальное окно расположено перед задним фоном */
+}
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон */
+    text-align: center;
+}
+
+.mini-modal-dialog {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 50%; /* Максимальная ширина модального окна */
+    width: 100%;
+}
+
+.modal-dialog {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 80%; /* Максимальная ширина модального окна */
+    width: 100%;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    margin: 0;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон с прозрачностью */
+    z-index: 1040; /* Убедитесь, что задний фон расположен за модальным окном */
+}
